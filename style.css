@@ -1,0 +1,362 @@
+/* Reset CSS - Ensures consistent styling across browsers */
+* {
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  /* Remove default button styling for a clean slate */
+  button {
+    background: none; /* Removes default background */
+    border: none; /* Removes default border */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    font: inherit; /* Inherits font from parent element */
+    color: inherit; /* Inherits color from parent element */
+    cursor: pointer; /* Ensures cursor changes to pointer on hover */
+    outline: none; /* Removes default focus outline */
+  }
+
+  .hamburger {
+    font-size: 30px;
+    color: #807f7f;
+    margin-left: 2%;
+    cursor: pointer;
+    display: block;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+  }
+  
+  .sidebar .closebtn:hover {
+    color: #807f7f;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 0; /* Sidebar is hidden initially */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2c2c2c;
+    overflow-x: hidden;
+    transition: 0.5s; /* Smooth transition for sidebar */
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #807f7f;
+  }
+  
+  .content {
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: block;
+  }
+  
+  .ticket-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #605f5f;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .ticket-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .ticket-dropdown-content a:hover {background-color: #333232}
+  
+  
+  .dropdown.active .arrow {
+    transform: rotate(-180deg);
+  }
+  
+  
+  /* Basic page styling */
+  body {
+    background: url('./images/background\ 1.jpg') center / cover no-repeat; /* Sets background image, centers it, and ensures it covers the entire page */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100vw; /* Sets the width to 100% of the viewport width */
+    font-family: 'Inconsolata', monospace; /* Sets a monospaced font for the body */
+    display: flex; /* Applies flexbox layout */
+    flex-direction: column; /* Arranges children in a column */
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  .notification-bar {
+    background-color: hwb(0 12% 88% / 0.915);
+    color: #e2e2e2;
+    padding: 4px;
+    border: 1px solid hsl(0, 0%, 24%);
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .notification-content {
+    /* display: inline-block; */
+    padding-left: 100%;
+    animation: scroll 25s linear infinite;
+  }
+  
+  .notification-content p {
+    display: inline;
+    margin: 0;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex; /* Applies flexbox layout */
+    justify-content: space-between; /* Distributes space between children */
+    align-items: center; /* Aligns children vertically in the center */
+    padding: 20px 0; /* Adds vertical padding */
+  }
+  
+  .logo {
+    margin-left: 5%; /* Adds left margin */
+  }
+  
+  .logo img {
+    max-width: 180px; /* Limits maximum width */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  .social-icons {
+    margin-right: 5%; /* Adds right margin */
+  }
+  
+  .social-icons img {
+    width: 20px; /* Sets width */
+    height: 20px; /* Sets height */
+    margin-left: 7px; /* Adds left margin between icons */
+  }
+
+  .artist-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
+    grid-gap: 20px; /* Adjusts spacing between grid items */
+    width: 75%; /* Sets the width of the grid to 75% of the page */
+    margin: 0 auto; /* Centers the grid horizontally */
+    padding: 20px; /* Padding around the entire grid for better spacing from page edges */
+}
+
+.artist-gallery > div {
+    background-color: #44434396; /* Light grey background for each artist, can be changed */
+    border: 1px solid #545353; /* Adds a subtle border around each artist */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: Adds shadow for better visibility */
+    text-align: center; /* Centers the text below the image */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+}
+
+
+
+.artist-gallery img {
+    width: 150px; 
+    height: 200px; 
+}
+
+.artist-gallery span {
+    display: block; /* Ensures the name appears on a new line below the image */
+    margin-top: 8px; /* Space between the image and the name */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #898989; /* Dark grey color for text, enhances readability */
+}
+
+.artist-gallery > div:hover {
+    transform: translateY(-5px); /* Slightly raises the artist div on hover */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate interactivity */
+}
+
+  /* Mobile social icons */
+  .social-icons-mobile {
+    display: none; /* Hidden by default */
+    width: 80%; /* Sets width */
+    justify-content: center; /* Centers content */
+    margin: 0 auto; /* Centers element */
+    position: fixed; /* Fixes the element's position */
+    bottom: 0; /* Positions it at the bottom of the viewport */
+    left: 50%; /* Centers the element horizontally */
+    transform: translateX(-50%); /* Adjusts for the element's width */
+    margin-bottom: 40px; /* Adds bottom margin */
+    padding: 10px; /* Adds padding */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+  }
+  
+  .social-icons-mobile img {
+    width: 20px; /* Sets width */
+    height: 20px; /* Sets height */
+    margin-left: 15px; /* Adds left margin between icons */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .button-group {
+      flex-direction: column; /* Changes direction to column on smaller screens */
+      align-items: center; /* Centers buttons horizontally */
+      width: 80%; /* Adjusts width */
+    }
+  
+    .button-group button {
+      height: 80px; /* Sets button height */
+      width: 100%; /* Sets button width */
+      outline: 2px solid rgba(52, 52, 52, 0.5); /* Sets outline color and width */
+      margin-bottom: 10px; /* Adds bottom margin */
+    }
+  
+    .intro {
+      display: none; /* Hides intro section */
+    }
+  
+    .imagebox img {
+      margin-right: 0px; /* Removes right margin */
+      padding: 7%; /* Adds padding */
+    }
+  
+    .social-icons {
+      display: none; /* Hides desktop social icons */
+    }
+  
+    .social-icons-mobile {
+      display: flex; /* Displays mobile social icons */
+    }
+  
+    .footer-logo {
+      display: none;
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px 5%;
+    background-color: #33333398;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+    margin-right: 20px;
+  }
+  
+  .footer-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-contact p {
+    margin: 5px 0;
+  }
+  
+  .footer-social {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .footer-social img {
+    max-width: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .footer-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-form button {
+    padding: 8px 16px;
+    background-color: hsl(0, 0%, 35%);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .footer-form button:hover {
+    background-color: #000000;
+  }
+  
+  /* Uncomment for border debugging */
+  /* .border {
+    border: 1px solid blue;
+  } */
