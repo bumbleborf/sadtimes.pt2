@@ -10,12 +10,16 @@ $(document).ready(function(){
     });
 
     // Ensure this targets the dropbtn specifically
-    $('.dropbtn').click(function(e){
+    // #dropbtn is the ID of the Tickets button
+    $('#dropbtn').click(function(e){
         e.stopPropagation(); // Stop propagation to ensure only this event fires
-        var $dropdown = $(this).closest('.dropdown');
-        $dropdown.find('.ticket-dropdown-content').slideToggle('fast');
-        $dropdown.toggleClass('active');
-        $dropdown.find('.arrow').toggleClass('rotated');
+        // #dropdown is the ID of the dropdown content
+        $('#dropdown').slideToggle();
+
+        //var $dropdown = $(this).closest('.dropdown');
+        //$dropdown.find('.ticket-dropdown-content').slideToggle('fast');
+        //$dropdown.toggleClass('active');
+        //$dropdown.find('.arrow').toggleClass('rotated');
     });
 
     $('.overlay').click(function(){
