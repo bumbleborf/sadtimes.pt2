@@ -5,6 +5,8 @@
   padding: 0; /* Removes default padding */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 /* Remove default button styling for a clean slate */
 button {
   background: none; /* Removes default background */
@@ -15,6 +17,10 @@ button {
   color: inherit; /* Inherits color from parent element */
   cursor: pointer; /* Ensures cursor changes to pointer on hover */
   outline: none; /* Removes default focus outline */
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
 }
 
 html,
@@ -195,6 +201,13 @@ main {
   margin-left: 10px; /* Space between icons */
 }
 
+.title-image img {
+  width: 50vw;  /* 50% of the viewport width */
+  height: auto;  /* Maintain aspect ratio */
+  display: block;  /* Ensures the image is a block-level element */
+  margin: 0 auto;  /* Centers the image horizontally */
+}
+
 .artist-gallery {
   display: grid;
   grid-template-columns: auto auto auto auto; /* Creates four equal columns based on content */
@@ -315,6 +328,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 30px;
   padding: 20px 5%;
   background-color: #33333398;
@@ -346,12 +360,12 @@ main {
   margin-right: 10px;
 }
 
-.footer-center {
+/*.footer-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 .footer-links {
   list-style-type: none;
@@ -397,6 +411,47 @@ main {
 
 .footer-form button:hover {
   background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto 20px; /* Center logo and add space below */
+  }
+
+  .footer-details,
+  .footer-links,
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-form {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    margin-bottom: 15px;
+  }
+
+  .footer-social img {
+    margin: 0 5px; /* Less space between icons */
+  }
+
+  .footer-form input,
+  .footer-form button {
+    width: 90%; /* Wider form elements for easier interaction */
+  }
 }
 
 /* Uncomment for border debugging */
