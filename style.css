@@ -17,6 +17,25 @@
     outline: none; /* Removes default focus outline */
   }
 
+  html, body {
+    height: 100%; /* Ensures html and body take full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+body {
+    background: url('./images/background 1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Covers the full area of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Allows main content to expand */
+    overflow-y: auto; /* Ensures content can scroll inside main */
+}
+
   .hamburger {
     font-size: 30px;
     color: #807f7f;
@@ -97,21 +116,6 @@
     transform: rotate(-180deg);
   }
   
-  
-  /* Basic page styling */
-  body {
-    background: url('./images/background\ 1.jpg') center / cover no-repeat; /* Sets background image, centers it, and ensures it covers the entire page */
-    height: 100vh; /* Sets the height to 100% of the viewport height */
-    width: 100vw; /* Sets the width to 100% of the viewport width */
-    font-family: 'Inconsolata', monospace; /* Sets a monospaced font for the body */
-    display: flex; /* Applies flexbox layout */
-    flex-direction: column; /* Arranges children in a column */
-  }
-  
-  main {
-    flex: 1;
-  }
-  
   .notification-bar {
     background-color: hwb(0 12% 88% / 0.915);
     color: #e2e2e2;
@@ -172,8 +176,8 @@
   .artist-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
-    grid-gap: 20px; /* Adjusts spacing between grid items */
-    width: 75%; /* Sets the width of the grid to 75% of the page */
+    grid-gap: 120px; /* Adjusts spacing between grid items */
+    width: 50%; /* Sets the width of the grid to 75% of the page */
     margin: 0 auto; /* Centers the grid horizontally */
     padding: 20px; /* Padding around the entire grid for better spacing from page edges */
 }
@@ -189,8 +193,6 @@
     align-items: center; /* Centers the content horizontally */
     justify-content: center; /* Centers the content vertically */
 }
-
-
 
 .artist-gallery img {
     width: 150px; 
