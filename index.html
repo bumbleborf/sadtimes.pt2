@@ -34,8 +34,15 @@
               <div class="sidebar">
                   <a href="javascript:void(0)" class="closebtn">&times;</a>
                   <div class="tickets-dropdown">
-                      <a href="#tickets" class="dropbtn">Tickets <span class="arrow">&#9662;</span></a>
-                      <div class="ticket-dropdown-content">
+                      <!-- 
+                        changed class to id
+                        removed href attribute
+                      -->
+                      <a id="dropbtn">Tickets <span class="arrow">&#9662;</span></a>
+                      <!--
+                        added id attribute
+                      -->
+                      <div class="ticket-dropdown-content" id="dropdown">
                           <a href="#daypasses">Day Passes</a>
                           <a href="#weekendpasses">Weekend Passes</a>
                           <a href="#experiences">Experiences</a>
@@ -55,7 +62,7 @@
               </div>
           </header>
           
-            <div class="artist-gallery">
+            <div class="artist-gallery border">
                 <div class="artist1">
                     <img src="images/jock.b.jpg" alt="Jock Boyd">
                     <span>Jock Boyd (AU)</span>
