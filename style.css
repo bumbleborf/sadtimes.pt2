@@ -148,36 +148,52 @@ main {
   
   /* Header styles */
   .header {
-    display: flex; /* Applies flexbox layout */
-    justify-content: space-between; /* Distributes space between children */
-    align-items: center; /* Aligns children vertically in the center */
-    padding: 20px 0; /* Adds vertical padding */
-  }
-  
-  .logo {
-    margin-left: 5%; /* Adds left margin */
-  }
-  
-  .logo img {
-    max-width: 180px; /* Limits maximum width */
-    height: auto; /* Maintains aspect ratio */
-  }
-  
-  .social-icons {
-    margin-right: 5%; /* Adds right margin */
-  }
-  
-  .social-icons img {
-    width: 20px; /* Sets width */
-    height: 20px; /* Sets height */
-    margin-left: 7px; /* Adds left margin between icons */
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    font-size: 30px;
+    color: #807f7f;
+    margin-right: 20px;  /* Adjust spacing between hamburger and logo */
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: 2%;  /* Adjust as needed */
+}
+
+.logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;  /* Adjust right margin */
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;  /* Space between icons */
+}
 
   .artist-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
-    grid-gap: 120px; /* Adjusts spacing between grid items */
-    width: 50%; /* Sets the width of the grid to 75% of the page */
+    grid-gap: 20px (col) 10px (row); /* Adjusts spacing between grid items */
+    width: 75%; /* Sets the width of the grid to 50% of the page */
     margin: 0 auto; /* Centers the grid horizontally */
     padding: 20px; /* Padding around the entire grid for better spacing from page edges */
 }
@@ -186,7 +202,9 @@ main {
     background-color: #44434396; /* Light grey background for each artist, can be changed */
     border: 1px solid #545353; /* Adds a subtle border around each artist */
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: Adds shadow for better visibility */
+    margin-top: 20%;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow for better visibility */
     text-align: center; /* Centers the text below the image */
     display: flex;
     flex-direction: column;
@@ -195,8 +213,11 @@ main {
 }
 
 .artist-gallery img {
-    width: 150px; 
-    height: 200px; 
+  width: 150px; 
+  height: 200px;
+  /* Adding a box-shadow that simulates a blurred border */
+  box-shadow: 0 0 8px 4px rgba(10, 10, 10, 0.5); /* Grey shadow with some blur */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 .artist-gallery span {
